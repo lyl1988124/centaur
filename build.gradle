@@ -1,3 +1,50 @@
 group 'com.lyl'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'java'
+apply plugin: 'idea'
+
+allprojects {
+    buildDir='target'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+
+    //设置仓库
+    repositories {
+        mavenCentral()
+        maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    }
+
+    //javadoc和源代码
+    idea {
+        module {
+            downloadJavadoc = true
+            downloadSources = true
+        }
+    }
+
+    //javadoc和源代码
+    eclipse {
+        classpath {
+            downloadJavadoc = true
+            downloadSources = true
+        }
+    }
+
+    //设置资源路径
+    sourceSets {
+        main.resources {
+            if(project.equals('profile')){
+                srcDir 'src/main/resources-'+project.profile
+                srcDir 'src/test/resources-'+project.profile
+            }else{
+                srcDir 'src/main/resources-dev'
+                srcDir 'src/test/resources-dev'
+            }
+        }
+    }
+}
