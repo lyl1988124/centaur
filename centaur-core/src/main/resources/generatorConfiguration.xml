@@ -42,7 +42,7 @@
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mybatis"  targetProject="${src_main_resources}">
+        <sqlMapGenerator targetPackage="mapping"  targetProject="${src_main_resources}">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 

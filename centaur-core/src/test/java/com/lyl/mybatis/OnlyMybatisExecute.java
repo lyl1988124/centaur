@@ -32,7 +32,7 @@ public class OnlyMybatisExecute {
         TestMapper testMapper = sqlSession.getMapper(TestMapper.class);
         TestExample testExample = new TestExample();
         TestExample.Criteria criteria = testExample.createCriteria();
-        criteria.andIdEqualTo(2);
+        criteria.andIdEqualTo(1);
         List<Test> list = testMapper.selectByExample(testExample);
         System.out.println(list);
 

@@ -1,20 +1,24 @@
 package com.lyl;
 
+
 import com.lyl.dao.domain.TestExample;
-import com.lyl.dao.mapper.TestMapper;
 import com.lyl.service.TestService;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * Created by lyl
  * Date 2018/11/28
  */
 
+@SpringBootApplication
 public class App {
+
+
     public static void main(String[] args) {
-        TestService testService = new TestService();
-        TestExample testExample = new TestExample();
-        TestExample.Criteria criteria = testExample.createCriteria();
-        criteria.andIdEqualTo(1);
-        System.out.println(testService.countByExample(testExample));
+        ConfigurableApplicationContext ctx = SpringApplication.run(App.class, args);
+        ctx.start();
+
     }
 }
