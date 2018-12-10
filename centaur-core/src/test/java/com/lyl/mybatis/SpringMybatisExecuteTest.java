@@ -18,6 +18,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+//@MapperScan("com.lyl.dao.mapper") 或者在mapper.class 中加注解:@Mapper
 public class SpringMybatisExecuteTest {
 
     @Resource
