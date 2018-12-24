@@ -1,0 +1,7 @@
+group 'com.lyl'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.thrift/libthrift
+    compile group: 'org.apache.thrift', name: 'libthrift', version: '0.11.0', ext: 'pom'
+}
