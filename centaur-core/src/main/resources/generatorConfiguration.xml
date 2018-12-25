@@ -28,16 +28,16 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/test"
-                        userId="test"
-                        password="test">
+                        connectionURL="jdbc:mysql://localhost:3306/centaur"
+                        userId="centaur"
+                        password="centaur">
         </jdbcConnection>
 
         <javaTypeResolver >
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.lyl.dao.domain" targetProject="${src_main_java}">
+        <javaModelGenerator targetPackage="com.lyl.core.dao.domain" targetProject="${src_main_java}">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
@@ -46,7 +46,7 @@
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.lyl.dao.mapper" type="MIXEDMAPPER" targetProject="${src_main_java}">
+        <javaClientGenerator targetPackage="com.lyl.core.dao.mapper" type="MIXEDMAPPER" targetProject="${src_main_java}">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
@@ -69,6 +69,7 @@
             <!--<columnOverride column="remarks" jdbcType="VARCHAR" />-->
         <!--</table>-->
 
-         <table tableName="test" domainObjectName="Test" />
+         <table tableName="galaxy" domainObjectName="Galaxy" />
+        <table tableName="test" domainObjectName="Test" />
     </context>
 </generatorConfiguration>

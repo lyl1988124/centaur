@@ -1,4 +1,4 @@
-package com.lyl.dao.domain;
+package com.lyl.core.dao.domain;
 
 import java.io.Serializable;
 

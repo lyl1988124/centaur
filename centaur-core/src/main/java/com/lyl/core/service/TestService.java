@@ -1,8 +1,8 @@
-package com.lyl.service;
+package com.lyl.core.service;
 
-import com.lyl.dao.domain.Test;
-import com.lyl.dao.domain.TestExample;
-import com.lyl.dao.mapper.TestMapper;
+import com.lyl.core.dao.domain.Test;
+import com.lyl.core.dao.domain.TestExample;
+import com.lyl.core.dao.mapper.TestMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

@@ -1,8 +1,8 @@
 package com.lyl.mybatis;
 
-import com.lyl.dao.domain.Test;
-import com.lyl.dao.domain.TestExample;
-import com.lyl.service.TestService;
+import com.lyl.core.dao.domain.Test;
+import com.lyl.core.dao.domain.TestExample;
+import com.lyl.core.service.TestService;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,7 +18,8 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-//@MapperScan("com.lyl.dao.mapper") 或者在mapper.class 中加注解:@Mapper
+//或者在mapper.class 中加注解:@Mapper
+@MapperScan("com.lyl.core.dao.mapper")
 public class SpringMybatisExecuteTest {
 
     @Resource

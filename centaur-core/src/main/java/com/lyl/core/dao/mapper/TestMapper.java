@@ -1,7 +1,7 @@
-package com.lyl.dao.mapper;
+package com.lyl.core.dao.mapper;
 
-import com.lyl.dao.domain.Test;
-import com.lyl.dao.domain.TestExample;
+import com.lyl.core.dao.domain.Test;
+import com.lyl.core.dao.domain.TestExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
@@ -90,7 +90,7 @@ public interface TestMapper {
         "from test",
         "where id = #{id,jdbcType=INTEGER}"
     })
-    @ResultMap("com.lyl.dao.mapper.TestMapper.BaseResultMap")
+    @ResultMap("com.lyl.core.dao.mapper.TestMapper.BaseResultMap")
     Test selectByPrimaryKey(Integer id);
 
     /**

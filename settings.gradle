@@ -1,4 +1,5 @@
 rootProject.name = 'centaur'
 include 'centaur-core'
 include 'centaur-thrift'
+include 'centaur-common'
 

@@ -20,6 +20,10 @@ configurations {
 
 
 dependencies {
+    //compile group :'com.lyl',name:'centaur-thrift',version: '1.0-SNAPSHOT'
+
+    compile project(":centaur-thrift")
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
     /*spring boot start*/
@@ -68,6 +72,7 @@ dependencies {
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     mybatisGenerator 'mysql:mysql-connector-java:5.1.47'
     /*mybatisGenerator end*/
+
 }
 
 task mybatisGenerator<<{

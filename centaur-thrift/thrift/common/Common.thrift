@@ -13,8 +13,7 @@ struct BizContext{
 2: required string uid
 3: optional string productId
 4: optional string reqTime
-5: optional map<String,String> bizExt #扩展信息
-
+5: optional map<string,string> bizExt #扩展信息
 }
 
 #请求信息
@@ -22,7 +21,7 @@ struct Header{
   1: required string caller #调用方
   2: optional string traceId #请求ID 跟踪整个业务
   3: optional string spanId #下游TRACE id
-  4: optional map<String,String> otherMap
+  4: optional map<string,string> otherMap
   5: optional BizContext bizContext #上下文
 }
 

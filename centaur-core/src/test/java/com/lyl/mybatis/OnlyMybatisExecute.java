@@ -1,8 +1,8 @@
 package com.lyl.mybatis;
 
-import com.lyl.dao.domain.Test;
-import com.lyl.dao.domain.TestExample;
-import com.lyl.dao.mapper.TestMapper;
+import com.lyl.core.dao.domain.Test;
+import com.lyl.core.dao.domain.TestExample;
+import com.lyl.core.dao.mapper.TestMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
