@@ -6,6 +6,7 @@ import com.lyl.thrift.common.ReturnMsg;
 import com.lyl.thrift.galaxy.CreateGalaxyReq;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 
@@ -21,6 +22,7 @@ public class GalaxyController {
     GalaxyService galaxyService;
 
     @RequestMapping("/create")
+    @ResponseBody
     public ReturnMsg createGalaxy(CreateGalaxyReq req){
         ReturnMsg returnMsg = galaxyService.createGalaxy(req);
         return  returnMsg;

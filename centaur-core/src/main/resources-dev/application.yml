@@ -5,8 +5,8 @@ spring:
   profiles:
     active: dev
   datasource:
-    name: datatest
-    jdbc-url: jdbc:mysql://127.0.0.1:3306/centaur
+    name: centaur
+    url: jdbc:mysql://127.0.0.1:3306/centaur?useUnicode=true&characterEncoding=UTF-8
     username: centaur
     password: centaur
     #使用druid数据源

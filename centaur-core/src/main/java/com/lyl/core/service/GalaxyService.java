@@ -22,11 +22,15 @@ public class GalaxyService {
         ReturnMsg returnMsg = new ReturnMsg();
 
         Galaxy galaxy = new Galaxy();
-        galaxy.setUid(req.getUid());
+        if(null!=req.getUid())
+            galaxy.setUid(req.getUid());
         galaxy.setAge(req.getAge());
-        galaxy.setName(req.getName());
-        galaxy.setExtInfo(req.getExtInfo());
-        galaxy.setCaller(req.getCaller());
+        if(null!=req.getName())
+            galaxy.setName(req.getName());
+        if(null!=req.getExtInfo())
+            galaxy.setExtInfo(req.getExtInfo());
+        if(null!=req.getCaller())
+            galaxy.setCaller(req.getCaller());
 
         int result = mapper.insertSelective(galaxy);
 
