@@ -7,6 +7,8 @@ import com.lyl.thrift.galaxy.CreateGalaxyReq;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 
@@ -26,5 +28,11 @@ public class GalaxyController {
     public ReturnMsg createGalaxy(CreateGalaxyReq req){
         ReturnMsg returnMsg = galaxyService.createGalaxy(req);
         return  returnMsg;
+    }
+
+    @RequestMapping("/hello")
+    public String helloGalaxy(CreateGalaxyReq req){
+
+        return "/html/Hello";
     }
 }
