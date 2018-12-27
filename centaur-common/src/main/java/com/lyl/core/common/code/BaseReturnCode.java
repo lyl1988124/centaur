@@ -17,11 +17,11 @@ public class BaseReturnCode {
 
 
     /**服务器 start*/
-    public static final ReturnCode SERVER_ERROR =new ReturnCode(20000,"服务起异常");
+    public static final ReturnCode SERVER_ERROR =new ReturnCode(20000,"服务器异常");
 
-    public static final ReturnCode SERVER_BUSY=new ReturnCode(20001,"服务起繁忙");
+    public static final ReturnCode SERVER_BUSY=new ReturnCode(20001,"服务器繁忙");
 
-    public static final ReturnCode SERVER_LIMITING=new ReturnCode(20002,"服务起限流");
+    public static final ReturnCode SERVER_LIMITING=new ReturnCode(20002,"服务器限流");
 
     /**服务器 end*/
 
