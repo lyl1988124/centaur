@@ -1,12 +1,15 @@
 package com.lyl.core.service;
 
 import com.lyl.core.dao.domain.Galaxy;
+import com.lyl.core.dao.domain.GalaxyExample;
 import com.lyl.core.dao.mapper.GalaxyMapper;
 import com.lyl.thrift.common.ReturnMsg;
 import com.lyl.thrift.galaxy.CreateGalaxyReq;
+import com.lyl.thrift.galaxy.QueryGalaxyReq;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by lyl
@@ -35,6 +38,25 @@ public class GalaxyService {
         int result = mapper.insertSelective(galaxy);
 
         returnMsg.setReturnResponse(String.valueOf(result));
+        return  returnMsg;
+    }
+
+    public ReturnMsg queryGalaxy(QueryGalaxyReq req){
+        ReturnMsg returnMsg = new ReturnMsg();
+
+        GalaxyExample example = new GalaxyExample();
+        GalaxyExample.Criteria criteria = example.createCriteria();
+
+        if(null!=req.getUid()) {
+            criteria.andUidEqualTo(req.getUid());
+        } else {
+            return returnMsg;
+        }
+        List<Galaxy> galaxies = mapper.selectByExample(example);
+        if (galaxies.size()>0){
+            Galaxy galaxy = galaxies.get(0);
+            returnMsg.setReturnResponse(String.valueOf(galaxy));
+        }
         return  returnMsg;
     }
 }

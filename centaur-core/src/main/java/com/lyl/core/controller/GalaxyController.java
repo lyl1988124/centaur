@@ -4,7 +4,9 @@ import com.lyl.core.dao.domain.Galaxy;
 import com.lyl.core.service.GalaxyService;
 import com.lyl.thrift.common.ReturnMsg;
 import com.lyl.thrift.galaxy.CreateGalaxyReq;
+import com.lyl.thrift.galaxy.QueryGalaxyReq;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,9 +32,12 @@ public class GalaxyController {
         return  returnMsg;
     }
 
-    @RequestMapping("/hello")
-    public String helloGalaxy(CreateGalaxyReq req){
+    @RequestMapping("/query")
+    public String helloGalaxy(QueryGalaxyReq req,Model model){
 
+        ReturnMsg returnMsg = galaxyService.queryGalaxy(req);
+
+        model.addAttribute("name","bb");
         return "/html/Hello";
     }
 }
