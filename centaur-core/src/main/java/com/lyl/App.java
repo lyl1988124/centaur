@@ -4,7 +4,6 @@ package com.lyl;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 
 /**
@@ -18,7 +17,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class App {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(App.class, args);
-        ctx.start();
+        System.out.println("!!!!");
 
+        //ctx.start();
+        //通知关闭
+        //ctx.stop();
+        System.out.println("###");
+        //彻底关闭
+        //ctx.close();
     }
+
+
 }

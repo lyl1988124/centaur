@@ -23,6 +23,7 @@ dependencies {
     //compile group :'com.lyl',name:'centaur-thrift',version: '1.0-SNAPSHOT'
 
     compile project(":centaur-thrift")
+    compile project(":centaur-common")
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 

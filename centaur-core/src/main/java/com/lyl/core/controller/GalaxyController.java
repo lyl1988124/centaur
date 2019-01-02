@@ -33,7 +33,16 @@ public class GalaxyController {
     }
 
     @RequestMapping("/query")
-    public String helloGalaxy(QueryGalaxyReq req,Model model){
+    @ResponseBody
+    public ReturnMsg queryGalaxy(QueryGalaxyReq req,Model model){
+
+        ReturnMsg returnMsg = galaxyService.queryGalaxy(req);
+
+        return returnMsg;
+    }
+
+    @RequestMapping("/select")
+    public String selectGalaxy(QueryGalaxyReq req,Model model){
 
         ReturnMsg returnMsg = galaxyService.queryGalaxy(req);
 
