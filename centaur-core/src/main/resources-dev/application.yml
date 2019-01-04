@@ -45,3 +45,6 @@ global:
     name: centaur-core
     port: 9999
     weight: -1
+
+sign:
+  check: true #是否验签

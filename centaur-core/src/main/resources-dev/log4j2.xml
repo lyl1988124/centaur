@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="info" strict="true">
     <Properties>
-        <Property name="LOG_HOME">${sys:user.home}/logs/centaur/centaur-thrift</Property>
+        <Property name="LOG_HOME">${sys:user.home}/logs/centaur/centaur-core</Property>
         <Property name="ENCODING">utf-8</Property>
     </Properties>
 
