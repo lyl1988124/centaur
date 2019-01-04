@@ -57,6 +57,8 @@ public class GalaxyService {
             Galaxy galaxy = galaxies.get(0);
             returnMsg.setReturnResponse(String.valueOf(galaxy));
         }
+        returnMsg.setReturnInfo("");
+        returnMsg.setReturnCode(111);
         return  returnMsg;
     }
 }

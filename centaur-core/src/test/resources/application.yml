@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: dev
+    active: test
   datasource:
     name: centaur
     url: jdbc:mysql://127.0.0.1:3306/centaur?useUnicode=true&characterEncoding=UTF-8&useSSL=false
@@ -34,3 +34,4 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: count=countSql
+

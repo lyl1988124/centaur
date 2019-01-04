@@ -38,3 +38,10 @@ pagehelper:
   reasonable: true
   support-methods-arguments: true
   params: count=countSql
+
+#thrift
+global:
+  service:
+    name: centaur-core
+    port: 9999
+    weight: -1

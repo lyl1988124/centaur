@@ -3,7 +3,7 @@ namespace java com.lyl.thrift.common
 #返回消息体
 struct ReturnMsg{
   1: required i64 returnCode  #返回码
-  2: required string returnMsg  #返回信息
+  2: required string returnInfo  #返回信息
   3: required string returnResponse  #返回参数
   4: optional string returnStack #返回错误码
 }

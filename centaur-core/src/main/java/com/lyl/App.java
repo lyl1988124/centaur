@@ -1,10 +1,13 @@
 package com.lyl;
 
 
+import com.lyl.thrift.thrift.*;
+import org.apache.thrift.transport.TTransportException;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 /**
  * Created by lyl
@@ -17,15 +20,35 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class App {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(App.class, args);
-        System.out.println("!!!!");
+        startThrift(ctx);
+    }
 
-        //ctx.start();
-        //通知关闭
-        //ctx.stop();
-        System.out.println("###");
-        //彻底关闭
-        //ctx.close();
+    private static void startThrift(ConfigurableApplicationContext ctx) {
+        ThriftConfigProvider thriftConfigProvider = ctx
+                .getBean("thriftConfigProvider", ThriftConfigProvider.class);
+        try {
+            ThriftLoader.load(new SpringContainerContext(ctx), thriftConfigProvider);
+        } catch (TTransportException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Bean
+    public SpringThriftConfigProvider thriftConfigProvider() {
+        SpringThriftConfigProvider provider = new SpringThriftConfigProvider();
+        return provider;
     }
 
 
+    @Bean
+    public ThriftSignatureChecker defaultThriftSignChecker() {
+        return (Object[] args, String methodName, byte[] body, String sign) -> {
+            System.out.println(sign);
+            if (sign == null || sign.length() == 0) {
+                return true;
+            }
+            String md5 = SignatureHelper.md5Signature(body);
+            return sign.equalsIgnoreCase(md5);
+        };
+    }
 }
