@@ -1,7 +1,7 @@
 package com.lyl.core;
 
 import com.lyl.core.service.GalaxyService;
-import com.lyl.thrift.galaxy.CreateGalaxyReq;
+import com.lyl.thrift.app.galaxy.CreateGalaxyReq;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.test.context.SpringBootTest;

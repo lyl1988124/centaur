@@ -4,8 +4,8 @@ import com.lyl.core.dao.domain.Galaxy;
 import com.lyl.core.dao.domain.GalaxyExample;
 import com.lyl.core.dao.mapper.GalaxyMapper;
 import com.lyl.thrift.common.ReturnMsg;
-import com.lyl.thrift.galaxy.CreateGalaxyReq;
-import com.lyl.thrift.galaxy.QueryGalaxyReq;
+import com.lyl.thrift.app.galaxy.CreateGalaxyReq;
+import com.lyl.thrift.app.galaxy.QueryGalaxyReq;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

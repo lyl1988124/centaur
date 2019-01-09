@@ -48,3 +48,9 @@ global:
 
 sign:
   check: true #是否验签
+
+galaxy:
+  servers:
+  - host: "127.0.0.1"
+    port: 9999
+    timeOut: 3000

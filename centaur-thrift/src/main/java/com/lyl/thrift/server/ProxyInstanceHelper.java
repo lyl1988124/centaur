@@ -1,4 +1,4 @@
-package com.lyl.thrift.thrift;
+package com.lyl.thrift.server;
 
 import java.lang.reflect.Method;
 

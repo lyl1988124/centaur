@@ -1,11 +1,13 @@
 package com.lyl;
 
 
-import com.lyl.thrift.thrift.*;
+import com.lyl.core.thrift.common.GalaxyThriftConfig;
+import com.lyl.thrift.server.*;
 import org.apache.thrift.transport.TTransportException;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -17,6 +19,7 @@ import org.springframework.context.annotation.Bean;
 //@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @SpringBootApplication
 @MapperScan("com.lyl.core.dao.mapper")
+@EnableConfigurationProperties(GalaxyThriftConfig.class)
 public class App {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(App.class, args);

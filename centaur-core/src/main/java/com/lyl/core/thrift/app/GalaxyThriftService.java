@@ -1,14 +1,14 @@
-package com.lyl.core.thrift;
+package com.lyl.core.thrift.app;
 
 import com.google.gson.Gson;
 import com.lyl.core.service.GalaxyService;
 import com.lyl.thrift.common.Header;
 import com.lyl.thrift.common.ReturnMsg;
 import com.lyl.thrift.common.SignInfo;
-import com.lyl.thrift.galaxy.GalaxyThrift;
-import com.lyl.thrift.galaxy.QueryGalaxyReq;
-import com.lyl.thrift.thrift.ExportableThriftService;
-import com.lyl.thrift.thrift.ThriftProtocol;
+import com.lyl.thrift.app.galaxy.GalaxyThrift;
+import com.lyl.thrift.app.galaxy.QueryGalaxyReq;
+import com.lyl.thrift.server.ExportableThriftService;
+import com.lyl.thrift.server.ThriftProtocol;
 import org.apache.thrift.TException;
 import org.springframework.stereotype.Service;
 

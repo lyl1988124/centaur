@@ -1,4 +1,4 @@
-package com.lyl.thrift.thrift;
+package com.lyl.thrift.server;
 
 import com.lyl.thrift.common.Trace;
 import org.apache.thrift.TException;

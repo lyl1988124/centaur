@@ -4,22 +4,14 @@ import com.google.gson.Gson;
 import com.lyl.thrift.common.Header;
 import com.lyl.thrift.common.ReturnMsg;
 import com.lyl.thrift.common.SignInfo;
-import com.lyl.thrift.galaxy.GalaxyThrift;
-import com.lyl.thrift.galaxy.QueryGalaxyReq;
+import com.lyl.thrift.app.galaxy.GalaxyThrift;
+import com.lyl.thrift.app.galaxy.QueryGalaxyReq;
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TTransport;
 import org.apache.thrift.transport.TTransportException;
-import org.junit.runner.RunWith;
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import java.net.URLEncoder;
-import java.security.PrivateKey;
-import java.security.PublicKey;
 
 /**
  * Created by lyl
