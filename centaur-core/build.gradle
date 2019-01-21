@@ -88,6 +88,7 @@ dependencies {
 
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     mybatisGenerator 'mysql:mysql-connector-java:5.1.47'
+    mybatisGenerator(group: 'com.itfsw', name: 'mybatis-generator-plugin', version: '1.2.17')
     /*mybatisGenerator end*/
 
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
